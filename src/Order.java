@@ -1,29 +1,30 @@
 
-public class Order extends Customer extends Product{
+import java.util.List;
+
+public class Order{
     private int orderId;
-    private String customer;
     private List<Product> products;
     private double totalAmount;
+    Customer customer;
     
-    public void Order(int orderId,Customer c){
+    public Order(int orderId, Customer customer){
         this.orderId=orderId;
-        super(customerId,name,email);
-        
     }
+    
             
     public void addProduct(Product product,int quantity){
-        if (quantity > product.getQuantityInStock()) {
+        if (quantity > product.getQuantity()) {
             System.out.println("Not enough quantity in stock.");
         } else {
-            product.setQuantityInStock(product.getQuantityInStock() - quantity);
-            double totalAmount=this.calculateTotal();
+            product.updateQuantity(product.getQuantity() - quantity);
+            double totalAmount=this.calculateTotal(product);
             this.products.add(product);
             System.out.println("Product added to order.");
         }
     }
     
-    public double calculateTotal(){
-        return product.getPrice() * quantity;
+    public double calculateTotal(Product product){
+        return product.getPrice() * product.getQuantity();
     }
     public String getOrderDetails(){
          StringBuilder details = new StringBuilder();

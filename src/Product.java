@@ -23,6 +23,10 @@ public class Product {
         return this.quantity;
     }
 
+    public int getProductId() {
+        return productId;
+    }
+
     public String getInfo(){
         return "Product ID: " + this.productId + "Name: " + this.name + "Price: " + this.price + "Quantity: " + this.quantity;
     }
