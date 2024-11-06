@@ -1,12 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author dathn
- */
 public class Customer {
-    private 
+    private int customerId;
+    private String name;
+    private String email;
+
+    public Customer(int customerId, String name, String email) {
+        this.customerId = customerId;
+        this.name = name;
+        this.email = email;
+    }
+
+    public String getInfo(){
+        return "Customer ID: " + this.customerId + "Name: " + this.name + "Email: " + this.email;
+    }
+    
 }
