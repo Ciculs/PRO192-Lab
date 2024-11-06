@@ -15,6 +15,10 @@ public class Product {
         this.quantity = quantity;
     }
 
+    public int setId(int productId){
+        return this.productId = productId;
+    }
+
     public double getPrice(){
         return this.price;
     }

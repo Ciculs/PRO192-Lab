@@ -1,5 +1,6 @@
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Order{
     private int orderId;
@@ -10,7 +11,6 @@ public class Order{
     public Order(int orderId, Customer customer){
         this.orderId=orderId;
     }
-    
             
     public void addProduct(Product product,int quantity){
         if (quantity > product.getQuantity()) {
