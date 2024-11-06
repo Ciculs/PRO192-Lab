@@ -17,7 +17,7 @@ public class Order{
             System.out.println("Not enough quantity in stock.");
         } else {
             product.updateQuantity(product.getQuantity() - quantity);
-            double totalAmount=this.calculateTotal(product);
+            totalAmount=this.calculateTotal(product);
             this.products.add(product);
             System.out.println("Product added to order.");
         }
@@ -26,18 +26,19 @@ public class Order{
     public double calculateTotal(Product product){
         return product.getPrice() * product.getQuantity();
     }
+    
     public String getOrderDetails(){
-         StringBuilder details = new StringBuilder();
-        details.append("Order ID: ").append(orderId).append("\n");
-        details.append("Customer: ").append(customer.getName()).append("\n");
-        details.append("Products:\n");
-
+        String res = "";
+        res += "Order ID: " + this.orderId + ", ";
+        res += customer.getInfo() + ", ";
+        res += "Products: \n";
         for (Product product : products) {
-            details.append(" - ").append(product.getName()).append("\n");
+            res += product.getInfo() + "\n";
         }
 
-        details.append("Total Amount: ").append(totalAmount).append("\n");
-        return details.toString();
+        res += "Total Amount: " + totalAmount;
+        
+        return res;
         
     }
 }

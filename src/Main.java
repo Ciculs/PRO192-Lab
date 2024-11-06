@@ -1,4 +1,4 @@
-public class Main implements Store{
+public class Main{
     public static void main(String[] args) {
         
     }
