@@ -8,8 +8,20 @@ public class Store {
     private List<Product> products;
     private List<Order> orders;
     private int orderCnt = 0;
-    Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in);
 
+    public void setOrderCnt(int orderCnt) {
+        this.orderCnt = orderCnt;
+    }
+    
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+    
     public Store(){
         products = new ArrayList<>();
         orders = new ArrayList<>();
@@ -55,11 +67,11 @@ public class Store {
             }
         }
         
-        for (int i = products.size() - 1; i >= 0; -- i){
+        /*for (int i = products.size() - 1; i >= 0; -- i){
             if (products.get(i).getQuantity() == 0){
                 products.remove(i);
             }
-        }
+        }*/
         
         orders.add(res);
 

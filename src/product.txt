@@ -1,0 +1,5 @@
+Product ID: 1	Name: banh mi	Price: 10000.0	Quantity: 15
+Product ID: 2	Name: keo deo	Price: 5000.0	Quantity: 100
+Product ID: 3	Name: mit say	Price: 50000.0	Quantity: 17
+Product ID: 4	Name: chan ga rut xuong	Price: 8000.0	Quantity: 27
+Product ID: 5	Name: banh bao	Price: 5000.0	Quantity: 31
