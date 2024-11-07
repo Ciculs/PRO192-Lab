@@ -16,23 +16,15 @@ public class Store {
     }
     
     public void addProduct(Product product){
-        products.add(product);
+        boolean check = false;
         for (Product x : products){
             if (x.getProductId() == product.getProductId()){
                 int Current = product.getQuantity();
-                product.updateQuantity(Current + 1);
+                x.updateQuantity(Current + x.getQuantity());
+                check = true;
             }
-        }    
-    }
-    
-    public void addProduct(Product product, int add){
-        products.add(product);
-        for (Product x : products){
-            if (x.getProductId() == product.getProductId()){
-                int Current = product.getQuantity();
-                product.updateQuantity(Current + add);
-            }
-        }    
+        }  
+        if (!check) products.add(product);
     }
 
     /// in ra cac product cho thang customer chon
@@ -41,7 +33,7 @@ public class Store {
         Order res = new Order(orderCnt, customer);
         System.out.println("List of Products in store");
         for (Product x : products){
-            System.out.println(x);
+            System.out.println(x.getInfo());
         }
         System.out.print("How many product do you need:");
         
@@ -55,11 +47,9 @@ public class Store {
             for (Product x : products){
                 if (x.getProductId() == ID){
                     int Current = x.getQuantity();
-                    if (Current < need){
-                        System.out.println("Not enough quantity in stock.");
-                        break;
-                    }
-                    res.addProduct(x, need);
+                    Product nwProduct = new Product(x.getProductId(), x.getName(), x.getPrice(), Current);
+                    res.addProduct(nwProduct, need);
+                    if (Current >= need) x.updateQuantity(Current - need);
                     break;
                 }
             }
@@ -71,6 +61,8 @@ public class Store {
             }
         }
         
+        orders.add(res);
+
         return res;
     }
     

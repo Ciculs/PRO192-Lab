@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,15 +11,17 @@ public class Order{
     
     public Order(int orderId, Customer customer){
         this.orderId=orderId;
+        this.customer = customer;
+        products = new ArrayList<Product>();
     }
             
     public void addProduct(Product product,int quantity){
         if (quantity > product.getQuantity()) {
             System.out.println("Not enough quantity in stock.");
         } else {
-            product.updateQuantity(product.getQuantity() - quantity);
-            totalAmount=this.calculateTotal(product);
-            this.products.add(product);
+            product.updateQuantity(quantity);
+            this.totalAmount=calculateTotal(product);
+            products.add(product);
             System.out.println("Product added to order.");
         }
     }
@@ -36,7 +39,7 @@ public class Order{
             res += product.getInfo() + "\n";
         }
 
-        res += "Total Amount: " + totalAmount;
+        res += "Total Amount: " + this.totalAmount;
         
         return res;
         

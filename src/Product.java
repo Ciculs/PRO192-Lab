@@ -23,6 +23,10 @@ public class Product {
         return this.price;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
     public int getQuantity(){
         return this.quantity;
     }
@@ -32,6 +36,6 @@ public class Product {
     }
 
     public String getInfo(){
-        return "Product ID: " + this.productId + "Name: " + this.name + "Price: " + this.price + "Quantity: " + this.quantity;
+        return "Product ID: " + this.productId + "\tName: " + this.name + "\tPrice: " + this.price + "\tQuantity: " + this.quantity;
     }
 }
