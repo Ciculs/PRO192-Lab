@@ -20,6 +20,7 @@ public class Main{
 
     private static void Master(){
         System.out.println("Welcome Master! What do you wanna do today?");
+        System.out.println("============================================");
         System.out.println("1. Add Product\n2. Print Orders\n3. List Products\n4. Exit");
 
         int k = Integer.parseInt(sc.nextLine());
@@ -67,6 +68,7 @@ public class Main{
         
         while (true){
             System.out.println("What do you wanna do?");
+            System.out.println("==================================");
             System.out.println("1. Buy something");
             System.out.println("2. Generate invoice");
             System.out.println("3. Exit");
@@ -90,6 +92,7 @@ public class Main{
             }
             else break;
         }
+        writeFileOrder("src/order.txt");
             //System.out.println(nwOrder.getOrderDetails());
         
         System.out.println("Thanks for your present!");
@@ -152,7 +155,9 @@ public class Main{
 //        }
         
         while (true){
+
             System.out.println("    Welcome!    ");
+            System.out.println("==================");
             System.out.println("What do you wanna do?");
             System.out.println("1. Login");
             System.out.println("2. Create new account");
@@ -208,7 +213,6 @@ public class Main{
                 customer(numAcc - 1);
             }
             else{
-                writeFileOrder("src/order.txt");
                 break;
             }
             

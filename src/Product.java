@@ -43,7 +43,7 @@ public class Product {
     }
 
     public String getInfo(){
-        return "Product ID: " + this.productId + "\tName: " + this.name + "\tPrice: " + this.price + "\tQuantity: " + this.quantity;
+        return " - " + "Product ID: " + this.productId + "\tName: " + this.name + "\tPrice: " + this.price + "\tQuantity: " + this.quantity;
     }
     
     // Method to create a Product from a formatted string

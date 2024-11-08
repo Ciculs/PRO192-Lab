@@ -1,3 +1,6 @@
-Order ID: 1, Customer ID: 0, Name: john, Email: johndoe@gmail.com, Products: , Products: , Products: , Products: , Products: , Products: , Products: 
-Product ID: 4	Name: chan ga rut xuong	Price: 8000.0	Quantity: 20
-Total Amount: 160000.0
+Order ID: 2, Customer ID: 1, Name: 1234, Email: 1234, Products: , Products: 
+ - Product ID: 1	Name: banh mi	Price: 10000.0	Quantity: 12
+Total Amount: 120000.0
+Order ID: 3, Customer ID: 1, Name: 1234, Email: 1234, Products: 
+ - Product ID: 2	Name: keo deo	Price: 5000.0	Quantity: 10
+Total Amount: 50000.0
