@@ -9,10 +9,10 @@ import java.util.List;
 
 public class Main{
     private static Scanner sc = new Scanner(System.in);
-    private static int pass = 123;
-    private static int ID = 0; 
     private static Store store = new Store();
-    private static int IDproduct = 0; 
+    // private static int pass = 123;
+    // private static int ID = 0; 
+    // private static int IDproduct = 0; 
     private static List<String> account = new ArrayList<>();
     private static List<String> password = new ArrayList<>();
     private static List<Customer> customers = new ArrayList<>();
@@ -37,6 +37,7 @@ public class Main{
                 int quantity = Integer.parseInt(sc.nextLine());
                 Product nwProduct = new Product(i + 1, name, price, quantity);
                 store.addProduct(nwProduct);
+                writeFileProduct("src/product.txt");
             }
         }
 
@@ -202,12 +203,11 @@ public class Main{
                 customers.add(new Customer(numAcc - 1, name, gmail));
                 System.out.println("Create account successfully!");
                 //System.out.println(numAcc - 1 + " " + customers.size());
-                customer(numAcc - 2);
-            }
-            else{
                 writeFileAccount("src/account.txt");
                 writeFileCustomer("src/customer.txt");
-                writeFileProduct("src/product.txt");
+                customer(numAcc - 1);
+            }
+            else{
                 writeFileOrder("src/order.txt");
                 break;
             }

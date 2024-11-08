@@ -34,7 +34,8 @@ public class Customer {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))){
             String line;
             while ((line = reader.readLine()) != null){
-                String[] customerInfo = line.split("Customer ID: ")[1].split(", Name: ")[1].split(", Email: ");
+                //Customer ID: 1, Name: johndoe, Email: 123@123.com
+                String[] customerInfo = line.split(", Name: ")[1].split(", Email: ");
                 int customerId = Integer.parseInt(line.split("Customer ID: ")[1].split(",")[0].trim());
                 String name = customerInfo[0];
                 String email = customerInfo[1];

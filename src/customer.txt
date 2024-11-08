@@ -1,1 +1,1 @@
-Customer ID: 0, Name: kien, Email: kienkute0810@gmail.com
+Customer ID: 0, Name: JohnDoe, Email: john@example.com
